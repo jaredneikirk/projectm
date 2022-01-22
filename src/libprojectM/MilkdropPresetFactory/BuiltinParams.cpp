@@ -302,7 +302,7 @@ int BuiltinParams::load_all_builtin_param(const PresetInputs& presetInputs, Pres
 
     load_builtin_param_float("frating", (void*) &presetOutputs->fRating, NULL, P_FLAG_NONE, 0.0, 5.0, 0.0, "");
     // 0 will turn off all waviness in our waves... 1 seems better
-    load_builtin_param_float("fwavescale", (void*) &presetOutputs->wave.scale, NULL, P_FLAG_NONE, 1.0, MAX_DOUBLE_SIZE,
+    load_builtin_param_float("fwavescale", (void*) &presetOutputs->wave.scale, NULL, P_FLAG_NONE, 0.0, MAX_DOUBLE_SIZE,
                              -MAX_DOUBLE_SIZE, "");
     load_builtin_param_float("gamma", (void*) &presetOutputs->fGammaAdj, NULL, P_FLAG_NONE, 0.0, MAX_DOUBLE_SIZE, 0,
                              "fGammaAdj");
@@ -310,16 +310,16 @@ int BuiltinParams::load_all_builtin_param(const PresetInputs& presetInputs, Pres
                              MAX_DOUBLE_SIZE, 0, "fVideoEchoZoom");
     load_builtin_param_float("echo_alpha", (void*) &presetOutputs->videoEcho.a, NULL, P_FLAG_NONE, 0.0, MAX_DOUBLE_SIZE,
                              0, "fvideoechoalpha");
-    load_builtin_param_float("wave_a", (void*) &presetOutputs->wave.a, NULL, P_FLAG_NONE, 1.0, 1.0, 0, "fwavealpha");
+    load_builtin_param_float("wave_a", (void*) &presetOutputs->wave.a, NULL, P_FLAG_NONE, 0.2, 1.0, 0, "fwavealpha");
     load_builtin_param_float("fwavesmoothing", (void*) &presetOutputs->wave.smoothing, NULL, P_FLAG_NONE, 0.0, 1.0,
                              -1.0, "");
     load_builtin_param_float("fmodwavealphastart", (void*) &presetOutputs->wave.modOpacityStart, NULL, P_FLAG_NONE, 0.0,
                              1.0, -1.0, "");
     load_builtin_param_float("fmodwavealphaend", (void*) &presetOutputs->wave.modOpacityEnd, NULL, P_FLAG_NONE, 0.0,
                              1.0, -1.0, "");
-    load_builtin_param_float("fWarpAnimSpeed", (void*) &presetOutputs->fWarpAnimSpeed, NULL, P_FLAG_NONE, 1.0, 1.0,
+    load_builtin_param_float("fWarpAnimSpeed", (void*) &presetOutputs->fWarpAnimSpeed, NULL, P_FLAG_NONE, 0.0, 1.0,
                              -1.0, "");
-    load_builtin_param_float("fWarpScale", (void*) &presetOutputs->fWarpScale, NULL, P_FLAG_NONE, 1.0, 1.0, -1.0, "");
+    load_builtin_param_float("fWarpScale", (void*) &presetOutputs->fWarpScale, NULL, P_FLAG_NONE, 0.0, 1.0, -1.0, "");
 
     load_builtin_param_float("fshader", (void*) &presetOutputs->fShader, NULL, P_FLAG_NONE, 0.0, 1.0, -1.0, "");
     // 0.98 seems close to milkdrop2 default
